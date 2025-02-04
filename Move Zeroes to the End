@@ -1,0 +1,11 @@
+def move_zeroes(arr):
+    count = 0  # Counts non-zero elements
+    for i in range(len(arr)):
+        if arr[i] != 0:
+            arr[count], arr[i] = arr[i], arr[count]
+            count += 1
+    return arr
+
+# Example
+arr = [0, 1, 9, 0, 4, 5]
+print(move_zeroes(arr))  # Output: [1, 9, 4, 5, 0, 0]
